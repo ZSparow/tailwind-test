@@ -4,7 +4,7 @@ function App() {
   const [isOpen, setIsOpen] = useState("invisible");
 return(
   <>
-  <div className="flex justify-between items-center py-2 px-5 fixed bg-white w-screen z-10 shadow-md">
+  <div className="flex justify-between items-center py-2 md:px-5 px-2 fixed bg-white w-screen z-20 shadow-md">
     <div className="rounded-full overflow-hidden flex items-center">
       
       <img src="./avatar.png" alt="avatar.png" className="h-10 mr-2"/>
@@ -12,8 +12,8 @@ return(
     </div>
     <div className="flex content-center">
 
-    <button className="bg-yellow-400 hover:bg-yellow-300 p-1 rounded-lg text-white mr-4 focus:outline-none">Log in</button>
-    <button className="bg-white border-yellow-400 hover:bg-yellow-200 border-solid border-2 hover:bg-white-300  p-2 rounded-lg mr-4 focus:outline-none">Sign up</button>
+    <button className="bg-yellow-400 hover:bg-yellow-300 md:p-1 rounded-lg text-white mr-4 focus:outline-none">Log in</button>
+    <button className="bg-white border-yellow-400 hover:bg-yellow-200 border-solid border-2 hover:bg-white-300  md:p-2 rounded-lg mr-4 focus:outline-none">Sign up</button>
     <button className="focus:outline-none" onClick={()=>isOpen === "invisible" ? setIsOpen("visible"): setIsOpen("invisible")}>
     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
@@ -38,7 +38,7 @@ return(
 {/* begin of slidebar */}
 
 
-<div className={`${isOpen} w-3/4 md:w-2/4 lg:w-1/5 h-screen shadow-lg fixed right-0 pt-24 bg-yellow-100`}>
+<div className={`${isOpen} w-3/4 md:w-2/4 lg:w-1/5 h-screen shadow-lg fixed right-0 pt-24 bg-yellow-100 z-10`}>
     <div className="flex items-center w-full hover:bg-yellow-400 cursor-pointer px-3 mb-2	">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="45">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -77,7 +77,7 @@ return(
       <h1 className="md:text-6xl text-3xl font-bold mb-5 capitalize">meet the new cola</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ipsa nesciunt! Sunt eaque tempora asperiores natus, provident ab quo repellat alias blanditiis! Quia cupiditate voluptatibus similique ipsum, illo corporis fuga aperiam enim doloremque id eligendi recusandae sit ipsa repudiandae, minus porro vero fugiat sunt? Debitis cupiditate deleniti est dignissimos a.</p>
     </div>
-    <img src="./cola.png" alt="" className="transform rotate-12"/>
+    <img src="./cola.png" alt="" className="transform rotate-12 w-1/3 md:w-1/6"/>
   </div>
 
 <div>
